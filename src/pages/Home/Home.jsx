@@ -33,6 +33,26 @@ const Home = () => {
           />
         </div>
       </div>
+      <div className="mt-20 p-4 md:px-12 pb-8 ">
+        <h2 className="text-center text-4xl font-bold italic text-[#41644A]">
+          Latest foody news
+        </h2>
+        <h1 className="text-center text-4xl mt-3 font-bold">
+          WE ARE FOODFRIES
+        </h1>
+        <div className="flex justify-center mt-8 gap-2">
+          <img
+            src="https://i.pinimg.com/564x/0e/58/dd/0e58dd00ec929da03a1ad7bf0cd7fefe.jpg"
+            alt=""
+            className="w-[300px] h-[300px] rounded-2xl"
+          />
+          <img
+            src="https://i.pinimg.com/564x/e3/ac/a4/e3aca4310acc6d2a0712baf724e64041.jpg"
+            alt=""
+            className="w-[300px] h-[300px] rounded-2xl"
+          />
+        </div>
+      </div>
     </div>
   );
 };
