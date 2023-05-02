@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { BsFillHandThumbsUpFill } from "react-icons/bs";
+import { BsFillHandThumbsUpFill, BsFillSuitHeartFill } from "react-icons/bs";
 
 const Eachchef = () => {
   const chefDetails = useLoaderData();
+  const [love, setLove] = useState(true);
+  console.log(chefDetails);
   const {
     bio,
     picture,
@@ -16,6 +18,13 @@ const Eachchef = () => {
     name,
     recipeno,
   } = chefDetails;
+
+  const changeLove = () => {
+    if (love === true) {
+      alert("added");
+    }
+    setLove(false);
+  };
   return (
     <div className=" p-4 md:px-12">
       <div className="md:flex  text-white bg-[#41644A] p-4 gap-6">
@@ -46,6 +55,43 @@ const Eachchef = () => {
           </div>
         </div>
       </div>
+
+      {/* 1st recipe */}
+      <div className="mt-7 ">
+        <div className="md:flex gap-6 shadow-lg p-4 shadow-green-800">
+          <div className=" md:w-[30%]  bg-slate-300">
+            <img
+              src={recipe1?.pic}
+              className="w-[400px] rounded-lg h-[300px]"
+              alt=""
+            />
+          </div>
+          <div className="mt-5 md:mt-0 md:w-[50%]">
+            <div className="flex  justify-between items-center">
+              <h2 className="text-3xl text-[#41644A] font-bold">
+                Recipe name:{recipe1?.recipe_name}
+              </h2>
+              <button onClick={() => changeLove()}>
+                <BsFillSuitHeartFill
+                  className={` text-3xl ${
+                    love ? "text-red-500" : "text-gray-500"
+                  }`}
+                />
+              </button>
+            </div>
+            <p className="mt-4 text-xl font-medium">
+              Ingredients: {recipe1?.ingredients}
+            </p>
+            <p className="mt-4">
+              <span className="font-bold">Method:</span> {recipe1?.method}
+            </p>
+            <p className="mt-4 font-bold text-[#41644A]">
+              Rating: {recipe1?.rating}
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* 1st recipe end */}
     </div>
   );
 };
