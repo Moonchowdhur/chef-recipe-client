@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BsYoutube } from "react-icons/bs";
 import Chefs from "../Chefs/Chefs";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Home = () => {
   const [chefs, setChefs] = useState([]);
@@ -74,6 +75,29 @@ const Home = () => {
           <Chefs key={chef.id} chef={chef}></Chefs>
         ))}
       </div>
+      {/* extra part2 start */}
+      <div className="mt-20 bg-[#ACB1D6] mb-16 md:flex justify-center items-center p-4 md:px-20 pb-8 ">
+        <div className="md:w-[40%] ">
+          <h2 className="tracking-widest text-white text-4xl ">ABOUT</h2>
+          <p className="mt-4 text-base font-medium text-black">
+            Food brings people together on many different levels. It’s
+            nourishment of the soul and body it’s truly love.Food is culture,
+            habit, craving and identity.Food is really and truly the most
+            effective medicine.
+          </p>
+          <button className="mt-4 bg-[#F9D949] font-bold shadow-lg text-black  border-none px-3 py-2 rounded-lg border border-black tracking-wider flex items-center gap-1">
+            Read More <AiOutlineArrowRight className="text-xl" />
+          </button>
+        </div>
+        <div className="md:w-[40%] mt-5 md:mt-0 ">
+          <img
+            src="https://i.pinimg.com/564x/a0/8b/aa/a08baabc8c96076bb601715bb97630ed.jpg"
+            alt=""
+            className="md:w-[350px] md:h-[350px] w-[400px] h-[400px] rounded-full"
+          />
+        </div>
+      </div>
+      {/* extra part2 end */}
     </div>
   );
 };
