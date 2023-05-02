@@ -7,6 +7,7 @@ import Register from "../Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Terms from "../Terms/Terms";
 import Error from "../Error/Error";
+import Blog from "../Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/terms",
         element: <Terms></Terms>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
       },
     ],
   },
