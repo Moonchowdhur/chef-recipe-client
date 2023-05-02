@@ -6,12 +6,13 @@ import Login from "../Login/Login";
 import Register from "../Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Terms from "../Terms/Terms";
+import Error from "../Error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
