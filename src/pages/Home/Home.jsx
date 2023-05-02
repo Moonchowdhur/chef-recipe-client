@@ -14,7 +14,7 @@ const Home = () => {
   // console.log(chefs);
 
   return (
-    <div className=" mt-5">
+    <div className="mt-16 md:mt-5">
       <div className="md:flex gap-12  p-4 md:px-12 bg-[#41644A]">
         <div className="md:w-[50%] mt-16">
           <h2 className="text-5xl text-white font-bold tracking-widest">
