@@ -2,6 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../../App";
 import Home from "../Home/Home";
 import Eachchef from "../Eachchef/Eachchef";
+import Login from "../Login/Login";
+import Register from "../Register/Register";
+import PrivateRoute from "./PrivateRoute";
+import Terms from "../Terms/Terms";
 
 const router = createBrowserRouter([
   {
@@ -15,9 +19,25 @@ const router = createBrowserRouter([
       },
       {
         path: "/chefs/:id",
-        element: <Eachchef></Eachchef>,
+        element: (
+          <PrivateRoute>
+            <Eachchef></Eachchef>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`https://assignment-server-jade.vercel.app/chefs/${params.id}`),
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/terms",
+        element: <Terms></Terms>,
       },
     ],
   },

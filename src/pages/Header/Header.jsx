@@ -1,10 +1,24 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { FaHamburger } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
+import { Authcontext } from "../provider/Authprovider";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const { user, logOut } = useContext(Authcontext);
+  console.log(user);
+
+  const logOutBtn = () => {
+    logOut()
+      .then(() => {
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   return (
     <div>
       <div className="md:px-12 flex items-center justify-between p-4 bg-[#F9D949]">
@@ -36,6 +50,19 @@ const Header = () => {
             >
               Blog
             </NavLink>
+          </li>
+          <li>
+            {user ? (
+              <>
+                {user.displayName} <button onClick={logOutBtn}>Logout</button>
+              </>
+            ) : (
+              <>
+                <Link to="/login">
+                  <button>Login</button>
+                </Link>
+              </>
+            )}
           </li>
         </ul>
         <div className="md:hidden text-3xl" onClick={() => setOpen(!open)}>

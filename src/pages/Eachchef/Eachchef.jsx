@@ -9,7 +9,7 @@ const Eachchef = () => {
   const [love, setLove] = useState(true);
   const [con, setCon] = useState(true);
   const [lo, setLo] = useState(true);
-  console.log(chefDetails);
+  //   console.log(chefDetails);
   const {
     bio,
     picture,
@@ -89,13 +89,6 @@ const Eachchef = () => {
               <h2 className="text-3xl text-[#41644A] font-bold">
                 Recipe name:{recipe1?.recipe_name}
               </h2>
-              <button onClick={() => changeLove()}>
-                <BsFillSuitHeartFill
-                  className={` text-3xl ${
-                    love ? "text-red-500" : "text-gray-500"
-                  }`}
-                />
-              </button>
             </div>
             <p className="mt-4 text-xl font-medium">
               Ingredients: {recipe1?.ingredients}
@@ -103,9 +96,20 @@ const Eachchef = () => {
             <p className="mt-4">
               <span className="font-bold">Method:</span> {recipe1?.method}
             </p>
-            <p className="mt-4 font-bold text-[#41644A]">
-              Rating: {recipe1?.rating}
-            </p>
+
+            <div className=" flex items-center gap-8 ">
+              <p className="mt-4  font-bold text-[#41644A]">
+                Rating: {recipe1?.rating}
+              </p>
+              <button
+                disabled={!love}
+                onClick={() => changeLove()}
+                className="btn mt-3 bg-red-600 border-none font-bold flex items-center gap-2"
+              >
+                <BsFillSuitHeartFill />
+                Add to Favourite
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -125,13 +129,6 @@ const Eachchef = () => {
               <h2 className="text-3xl text-[#41644A] font-bold">
                 Recipe name:{recipe2?.recipe_name}
               </h2>
-              <button onClick={() => changeLove2()}>
-                <BsFillSuitHeartFill
-                  className={` text-3xl ${
-                    con ? "text-red-500" : "text-gray-500"
-                  }`}
-                />
-              </button>
             </div>
             <p className="mt-4 text-xl font-medium">
               Ingredients: {recipe2?.ingredients}
@@ -139,9 +136,19 @@ const Eachchef = () => {
             <p className="mt-4">
               <span className="font-bold">Method:</span> {recipe2?.method}
             </p>
-            <p className="mt-4  font-bold text-[#41644A]">
-              Rating: {recipe2?.rating}
-            </p>
+            <div className=" flex items-center gap-8 ">
+              <p className="mt-4  font-bold text-[#41644A]">
+                Rating: {recipe2?.rating}
+              </p>
+              <button
+                disabled={!con}
+                onClick={() => changeLove2()}
+                className="btn mt-3 bg-red-600 border-none font-bold flex items-center gap-2"
+              >
+                <BsFillSuitHeartFill />
+                Add to Favourite
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -161,13 +168,6 @@ const Eachchef = () => {
               <h2 className="text-3xl text-[#41644A] font-bold">
                 Recipe name:{recipe3?.recipe_name}
               </h2>
-              <button onClick={() => changeLove3()}>
-                <BsFillSuitHeartFill
-                  className={` text-3xl ${
-                    lo ? "text-red-500" : "text-gray-500"
-                  }`}
-                />
-              </button>
             </div>
             <p className="mt-4 text-xl font-medium">
               Ingredients: {recipe3?.ingredients}
@@ -175,9 +175,19 @@ const Eachchef = () => {
             <p className="mt-4">
               <span className="font-bold">Method:</span> {recipe3?.method}
             </p>
-            <p className="mt-4  font-bold text-[#41644A]">
-              Rating: {recipe3?.rating}
-            </p>
+            <div className=" flex items-center gap-8 ">
+              <p className="mt-4  font-bold text-[#41644A]">
+                Rating: {recipe3?.rating}
+              </p>
+              <button
+                disabled={!lo}
+                onClick={() => changeLove3()}
+                className="btn mt-3 bg-red-600 border-none font-bold flex items-center gap-2"
+              >
+                <BsFillSuitHeartFill />
+                Add to Favourite
+              </button>
+            </div>
           </div>
         </div>
       </div>
