@@ -22,6 +22,7 @@ const Register = () => {
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
+    const photo = event.target.photo.value;
     // const confirm = event.target.confirm.value;
 
     setError("");
@@ -53,6 +54,7 @@ const Register = () => {
 
         updateProfile(user, {
           displayName: name,
+          photoURL: photo,
         })
           .then(() => {
             //
@@ -107,6 +109,19 @@ const Register = () => {
               id="name"
               placeholder="Enter Username"
               className="border w-full px-2 focus:outline-none text-base py-1 focus:ring-0 focus:border-gray-600 rounded"
+              required
+            />
+          </div>
+          <div className="mt-3">
+            <label htmlFor="photo" className="block text-base mb-2">
+              Photo URL
+            </label>
+            <input
+              type="text"
+              name="photo"
+              placeholder="Enter Photo URL"
+              className="border w-full px-2 focus:outline-none text-base py-1 focus:ring-0 focus:border-gray-600 rounded"
+              required
             />
           </div>
 

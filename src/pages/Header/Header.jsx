@@ -32,7 +32,7 @@ const Header = () => {
         </div>
         <ul
           className={`md:flex items-center gap-4 text-2xl font-bold md:static absolute ${
-            open ? "top-20 right-0 " : "-top-36 right-0"
+            open ? "top-20 right-7 " : "-top-36 right-0"
           }`}
         >
           <li>
@@ -53,9 +53,15 @@ const Header = () => {
           </li>
           <li>
             {user ? (
-              <>
-                {user.displayName} <button onClick={logOutBtn}>Logout</button>
-              </>
+              <div className="flex items-center gap-2">
+                <img
+                  src={user.photoURL}
+                  className="w-10 h-10 rounded-full"
+                  alt={user.displayName}
+                  title={user.displayName && user.displayName}
+                />
+                <button onClick={logOutBtn}>Logout</button>
+              </div>
             ) : (
               <>
                 <Link to="/login">
