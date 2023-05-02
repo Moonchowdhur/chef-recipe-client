@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { BsFillHandThumbsUpFill, BsFillSuitHeartFill } from "react-icons/bs";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Eachchef = () => {
   const chefDetails = useLoaderData();
@@ -21,7 +23,7 @@ const Eachchef = () => {
 
   const changeLove = () => {
     if (love === true) {
-      alert("added");
+      toast("Recipe is your favorite");
     }
     setLove(false);
   };
@@ -92,6 +94,7 @@ const Eachchef = () => {
         </div>
       </div>
       {/* 1st recipe end */}
+      <ToastContainer />
     </div>
   );
 };
