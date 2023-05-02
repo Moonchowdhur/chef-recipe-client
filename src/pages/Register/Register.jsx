@@ -5,10 +5,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import swal from "sweetalert";
 import { Authcontext } from "../provider/Authprovider";
+import Loading from "../Loading/Loading";
 
 const Register = () => {
   const { createUser } = useContext(Authcontext);
@@ -16,6 +17,11 @@ const Register = () => {
   const [eye, setEye] = useState(false);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
+  const navigation = useNavigation();
+
+  if (navigation.state === "loading") {
+    return <Loading></Loading>;
+  }
 
   const handleRegisterbtn = (event) => {
     event.preventDefault();

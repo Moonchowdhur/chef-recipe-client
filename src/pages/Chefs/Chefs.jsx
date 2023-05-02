@@ -1,10 +1,18 @@
 import React from "react";
 import { BsFillHandThumbsUpFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
+import Loading from "../Loading/Loading";
 
 const Chefs = ({ chef }) => {
+  const navigation = useNavigation();
+
   console.log(chef);
   const { id, name, picture, expricence, recipeno, likes } = chef;
+
+  if (navigation.state === "loading") {
+    return <Loading></Loading>;
+  }
+
   return (
     <div className="p-4 border border-green-900 shadow-xl">
       <div className="md:flex gap-4">

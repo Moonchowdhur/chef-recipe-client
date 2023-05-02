@@ -2,17 +2,23 @@ import React, { useEffect, useState } from "react";
 import { BsYoutube } from "react-icons/bs";
 import Chefs from "../Chefs/Chefs";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { useNavigation } from "react-router-dom";
+import Loading from "../Loading/Loading";
 
 const Home = () => {
   const [chefs, setChefs] = useState([]);
+  const navigation = useNavigation();
 
   useEffect(() => {
     fetch("https://assignment-server-jade.vercel.app/chefs")
       .then((res) => res.json())
       .then((data) => setChefs(data));
   }, []);
-
   // console.log(chefs);
+
+  if (navigation.state === "loading") {
+    return <Loading></Loading>;
+  }
 
   return (
     <div className="mt-16 md:mt-5">

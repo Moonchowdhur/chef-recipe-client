@@ -1,15 +1,22 @@
 import React, { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import { BsFillHandThumbsUpFill, BsFillSuitHeartFill } from "react-icons/bs";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loading from "../Loading/Loading";
 
 const Eachchef = () => {
   const chefDetails = useLoaderData();
+  const navigation = useNavigation();
   const [love, setLove] = useState(true);
   const [con, setCon] = useState(true);
   const [lo, setLo] = useState(true);
   //   console.log(chefDetails);
+
+  if (navigation.state === "loading") {
+    return <Loading></Loading>;
+  }
+
   const {
     bio,
     picture,

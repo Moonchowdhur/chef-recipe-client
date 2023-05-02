@@ -5,9 +5,15 @@ import { FcGoogle } from "react-icons/fc";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+  useNavigation,
+} from "react-router-dom";
 import swal from "sweetalert";
 import { Authcontext } from "../provider/Authprovider";
+import Loading from "../Loading/Loading";
 
 const Login = () => {
   const { signUser, resetPassword, googleSignIn, gitSignIn } =
@@ -18,8 +24,13 @@ const Login = () => {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const [eye, setEye] = useState(false);
+  const navigation = useNavigation();
 
   let from = location.state?.from?.pathname || "/";
+
+  if (navigation.state === "loading") {
+    return <Loading></Loading>;
+  }
 
   const handleLoginbtn = (event) => {
     event.preventDefault();
