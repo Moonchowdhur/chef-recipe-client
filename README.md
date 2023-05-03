@@ -4,7 +4,7 @@
 
 # Project Details:
 
-- My Website name is Chef Lite.This website is different type of chinese recipes.
+- My Website name is Cooking Lite.This website is different type of chinese recipes.
 
 - There are Navigation section section containing Home, Blog, user profile picture, name,Login and logout btn.
 
