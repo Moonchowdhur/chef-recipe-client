@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="bg-neutral text-neutral-content">
       <footer className="footer md:px-14 p-10 ">
         <div>
-          <span className="footer-title text-3xl font-bold">Resta</span>
+          <span className="footer-title text-3xl font-bold">Chef Lite</span>
           <p>This website is different kind of chinese recipes.</p>
           <div className="flex text-3xl items-center gap-4 my-5">
             <BsFacebook className="text-blue-500" />
@@ -43,8 +43,8 @@ const Footer = () => {
       </footer>
       <hr />
       <div className="flex  justify-around md:px-14 p-10 items-center py-5">
-        <p>@2023 Resta. All Rights Reserved</p>
-        <p>Powered by Resta</p>
+        <p>@2023 Chef Lite. All Rights Reserved</p>
+        <p>Powered by Chef Lite</p>
       </div>
     </div>
   );

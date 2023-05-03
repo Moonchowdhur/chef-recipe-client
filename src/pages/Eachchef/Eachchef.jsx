@@ -51,7 +51,7 @@ const Eachchef = () => {
     setLo(false);
   };
   return (
-    <div className=" p-4 md:px-12">
+    <div className="md:mt-0 mt-32 p-4 md:px-12">
       <div className="md:flex  text-white bg-[#41644A] p-4 gap-6">
         <div className="border p-4 border-dashed shadow-lg md:w-[50%]">
           <img
