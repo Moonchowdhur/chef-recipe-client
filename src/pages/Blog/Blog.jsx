@@ -35,7 +35,7 @@ const Blog = () => {
           <p className="mt-4   font-medium text-xl">
             (b)In controlled components, all event handling is done in the
             parent component. The parent component receives the event and
-            updates the state accordingly but in uncontrolled components, the
+            updates the state accordingly whereas, uncontrolled components, the
             event handling is done in the component itself. The component
             listens for events and updates its internal state accordingly.
           </p>
@@ -89,7 +89,7 @@ const Blog = () => {
           </h2>
           <p className="mt-4 font-medium text-xl">
             (a)Nodejs is a runtime environment that allows you to execute
-            JavaScript code on the server-side whereas, Expressjs is a web
+            JavaScript code on the server-side whereas,Expressjs is a web
             framework built on top of Node.js.
           </p>
           <p className="mt-4 font-medium text-xl">
@@ -100,9 +100,9 @@ const Blog = () => {
           </p>
           <p className="mt-4 font-medium text-xl">
             (c)Node.js is built on top of the V8 JavaScript engine used in
-            Google Chrome, which makes it extremely fast and efficient
-            whereas,Express.js provides a set of middleware functions that can
-            be used to handle HTTP requests and responses, parse request data,
+            Google Chrome, which makes it extremely fast and efficient whereas,
+            Express.js provides a set of middleware functions that can be used
+            to handle HTTP requests and responses, parse request data,
             authenticate users, and more. It also provides a routing system that
             allows you to define URL routes and map them to functions that
             handle requests.
