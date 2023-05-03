@@ -94,18 +94,6 @@ const Login = () => {
       });
   };
 
-  const twitterSign = () => {
-    twitterSignin()
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        swal("Twitter Login  successfully", "", "success");
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-      });
-  };
-
   return (
     <div className="flex md:mt-6 mt-32 justify-center my-7 ">
       <div className="w-96 p-6 shadow-md bg-white rounded">
@@ -119,7 +107,9 @@ const Login = () => {
         <hr className="mt-3" />
         <form onSubmit={handleLoginbtn}>
           <div>
-            {error && <p className="text-center mt-4 text-red-500">{error}</p>}
+            {error && (
+              <p className="text-center mt-4 font-bold text-red-500">{error}</p>
+            )}
           </div>
           <div>
             {success && (

@@ -90,7 +90,9 @@ const Register = () => {
         <hr className="mt-3" />
         <form onSubmit={handleRegisterbtn}>
           <div>
-            {error && <p className="text-center mt-4 text-red-500">{error}</p>}
+            {error && (
+              <p className="text-center mt-4 font-bold text-red-500">{error}</p>
+            )}
           </div>
           <div>
             {success && (

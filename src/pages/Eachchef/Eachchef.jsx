@@ -66,7 +66,7 @@ const Eachchef = () => {
               <span className="text-[#FCC8D1] me-2 font-bold ">Name:</span>
               {name}
             </h2>
-            <p className="mt-7 mx-5 text-3xl font-medium ">{bio}</p>
+            <p className="mt-7 mx-5 text-xl">{bio}</p>
             <div className="md:flex items-center mx-5 gap-7 mt-7 text-xl font-medium">
               <p className="mb-3 md:mt-0">
                 Years Of Expriences: {expricence}years
