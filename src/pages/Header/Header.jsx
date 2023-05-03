@@ -60,13 +60,17 @@ const Header = () => {
                   alt={user.displayName}
                   title={user.displayName && user.displayName}
                 />
+
                 <button onClick={logOutBtn}>Logout</button>
               </div>
             ) : (
               <>
-                <Link to="/login">
-                  <button>Login</button>
-                </Link>
+                <NavLink
+                  to="/login"
+                  className={({ isActive }) => (isActive ? "text-red-500" : "")}
+                >
+                  Login
+                </NavLink>
               </>
             )}
           </li>

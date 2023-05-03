@@ -2,6 +2,7 @@ import React from "react";
 import { BsFillHandThumbsUpFill } from "react-icons/bs";
 import { Link, useNavigation } from "react-router-dom";
 import Loading from "../Loading/Loading";
+import LazyLoad from "react-lazy-load";
 
 const Chefs = ({ chef }) => {
   const navigation = useNavigation();
@@ -17,11 +18,9 @@ const Chefs = ({ chef }) => {
     <div className="p-4 border border-green-900 shadow-xl">
       <div className="md:flex gap-4">
         <div className="">
-          <img
-            src={picture}
-            className="w-[200px] h-[200px] rounded-lg"
-            alt=""
-          />
+          <LazyLoad height={200} width={200} threshold={1}>
+            <img src={picture} className="w-full h-full" alt="" />
+          </LazyLoad>
         </div>
         <div>
           <h2 className="text-3xl font-medium">
