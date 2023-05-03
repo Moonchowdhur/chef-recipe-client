@@ -5,7 +5,7 @@ import Eachchef from "../Eachchef/Eachchef";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import PrivateRoute from "./PrivateRoute";
-import Terms from "../Terms/Terms";
+
 import Error from "../Error/Error";
 import Blog from "../Blog/Blog";
 
@@ -37,10 +37,7 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
-      {
-        path: "/terms",
-        element: <Terms></Terms>,
-      },
+
       {
         path: "/blog",
         element: <Blog></Blog>,

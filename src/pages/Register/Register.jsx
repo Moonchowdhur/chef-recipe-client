@@ -29,7 +29,6 @@ const Register = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
     const photo = event.target.photo.value;
-    // const confirm = event.target.confirm.value;
 
     setError("");
     console.log(email, password, confirm);
@@ -78,15 +77,11 @@ const Register = () => {
       });
   };
 
-  //   const handleChecked = (event) => {
-  //     setAccepted(event.target.checked);
-  //   };
-
   return (
     <div className="flex md:mt-6 mt-32 justify-center my-7">
       <div className="w-96 p-6 shadow-md bg-white rounded">
         <div className="text-center mb-3 font-bold text-3xl justify-center gap-3 flex items-center">
-          <FaUser className="text-fuchsia-700" />
+          <FaUser className="text-green-900" />
           <h1 className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-3xl font-black">
             Create an account
           </h1>
@@ -164,33 +159,12 @@ const Register = () => {
               </span>
             </div>
           </div>
-          {/* <div className="mt-3">
-            <label htmlFor="password" className="block text-base mb-2">
-              Confirm password
-            </label>
-            <input
-              type="password"
-              name="confirm"
-              id="confirm"
-              placeholder="Enter Password"
-              className="border w-full px-2 focus:outline-none text-base py-1 focus:ring-0 focus:border-gray-600 rounded"
-            />
-          </div> */}
+
           <div className="mt-3 ">
             <label className="label cursor-pointer">
               <input type="checkbox" className="checkbox" />
               <span className="label-text">
-                {
-                  <>
-                    I accept
-                    <Link
-                      to="/terms"
-                      className="mx-1 text-indigo-700 underline"
-                    >
-                      the Terms and Conditions
-                    </Link>
-                  </>
-                }
+                I accept the Terms and Conditions
               </span>
             </label>
           </div>

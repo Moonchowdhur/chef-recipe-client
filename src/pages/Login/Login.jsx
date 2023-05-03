@@ -110,7 +110,7 @@ const Login = () => {
     <div className="flex md:mt-6 mt-32 justify-center my-7 ">
       <div className="w-96 p-6 shadow-md bg-white rounded">
         <div className="text-center mb-3 font-bold text-3xl justify-center gap-3 flex items-center">
-          <FaUser className="text-fuchsia-700 " />
+          <FaUser className="text-green-900 " />
           <h1 className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-2xl font-black">
             Sign in to your account
           </h1>
@@ -128,10 +128,7 @@ const Login = () => {
               </p>
             )}
           </div>
-          {/* <div  className='mt-3'>
-                <label htmlFor="username" className='block text-base mb-2'>Username</label>
-                <input type="text" name="name" id="name" placeholder='Enter Username' className='border w-full px-2 focus:outline-none text-base py-1 focus:ring-0 focus:border-gray-600 rounded' />
-              </div> */}
+
           <div className="mt-3">
             <label htmlFor="email" className="block text-base mb-2">
               Email
@@ -206,7 +203,7 @@ const Login = () => {
         </div>
         <button className="mt-3">
           <small>
-            Don’t have an account yet?{" "}
+            Don’t have an account yet?
             <span className="text-indigo-700 font-semibold underline">
               <Link to="/register">Sign up</Link>
             </span>

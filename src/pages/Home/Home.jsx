@@ -14,7 +14,6 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setChefs(data));
   }, []);
-  // console.log(chefs);
 
   if (navigation.state === "loading") {
     return <Loading></Loading>;
