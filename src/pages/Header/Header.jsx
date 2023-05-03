@@ -28,7 +28,7 @@ const Header = () => {
             className="w-14 h-14 rounded-full"
             alt=""
           />
-          <h2 className="italic font-bold text-black text-4xl">Chef Lite</h2>
+          <h2 className="italic font-bold text-black text-4xl">Cooking Lite</h2>
         </div>
         <ul
           className={`md:flex md:bg-transparent bg-[#E9EDC9] items-center gap-4 text-2xl font-bold md:static absolute ${
