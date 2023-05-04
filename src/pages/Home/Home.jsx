@@ -27,9 +27,9 @@ const Home = () => {
             ENJOY YOUR <br />
             <span className="text-[#FCC8D1]">HEALTHY DELICIOUS FOOD</span>
           </h2>
-          <div className="flex gap-8 mt-16 items-center">
+          <div className="flex  gap-3 md:gap-8 mt-16 items-center">
             <button
-              className="rounded-2xl hover:text-white bg-[#F9D949] text-base text-black font-bold border-none px-5
+              className="rounded-2xl hover:text-white bg-[#F9D949] text-base text-black font-bold border-none px-3 md:px-5
              py-2 btn "
             >
               Book a table
