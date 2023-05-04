@@ -127,6 +127,7 @@ const Login = () => {
               type="email"
               ref={emailRef}
               name="email"
+              required
               id="email"
               placeholder="Enter Email"
               className="border w-full px-2 focus:outline-none text-base py-1 focus:ring-0 focus:border-gray-600 rounded"
@@ -141,6 +142,7 @@ const Login = () => {
                 type={eye ? "text" : "password"}
                 name="password"
                 id="password"
+                required
                 placeholder="Enter Password"
                 className="border w-full px-2 focus:outline-none text-base py-1 focus:ring-0 focus:border-gray-600 rounded"
               />
