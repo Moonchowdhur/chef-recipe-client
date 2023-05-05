@@ -46,7 +46,7 @@ const Register = () => {
       setError("Password has to be one special case letter.");
       return;
     } else if (!/.{6}/.test(password)) {
-      setError("Password has to be length 6.");
+      setError("Password must be at least 6 character.");
       return;
     }
 
